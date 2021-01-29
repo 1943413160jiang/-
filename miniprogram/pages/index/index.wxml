@@ -1,0 +1,62 @@
+<!-- 轮播图 -->
+<view class="swiper_container">
+<swiper class="swiper_content" indicator-dots indicator-color="#fff" indicator-active-color="orange" autoplay interval="3000">
+  <swiper-item wx:for="{{slidedata}}" wx:key="bannerId"><image src="{{item.pic}}"></image></swiper-item>
+</swiper>
+</view> 
+<!-- 导航栏 -->
+<view class="nav_container">
+  <view class="nav_item" bindtap="recommendSong">
+    <i class="iconfont icon-tuijian"></i>
+    <text>每日推荐</text>
+  </view>
+  <view class="nav_item">
+    <i class="iconfont icon-gedan"></i>
+    <text>歌单</text>
+  </view>
+  <view class="nav_item">
+    <i class="iconfont icon-paixingbang"></i>
+    <text>排行榜</text>
+  </view>
+  <view class="nav_item">
+    <i class="iconfont icon-diantai"></i>
+    <text>电台</text>
+  </view>
+  <view class="nav_item">
+    <i class="iconfont icon-zhibo"></i>
+    <text>直播</text>
+  </view>
+</view>
+<!-- 推荐歌曲 -->
+<view class="recommend_container">
+ <view class="recommend_content">
+ <NavHeader title="推荐歌曲" name="为你精心推荐"></NavHeader>
+  <view class="recommend_nav">
+    <!-- 推荐歌曲轮播 -->
+    <scroll-view class="recommend_items" enable-flex scroll-x>
+      <view class="recommend_item" wx:for="{{recommend_list}}" wx:for-item="recommend_item" wx:key="id">
+        <image src="{{recommend_item.picUrl}}"></image>
+        <text>{{recommend_item.name}}</text>
+      </view>
+    </scroll-view>
+  </view>
+   <!-- 排行榜 -->
+<view class="rank_container">
+  <!-- 头部区域 -->
+  <NavHeader title="排行榜" name="热歌风向标"></NavHeader>
+  <!-- 导航区域 -->
+  <swiper class="top_rank_container" next-margin="50rpx">
+    <swiper-item class="top_rank_item" wx:for="{{rank_list}}" wx:key="index">
+      <text class="hot_song">{{item.name}}</text>
+      <view class="rank_row_content" wx:for="{{item.tracks}}" wx:for-item="music_item" wx:key="id">
+        <view class="top_rank_content">
+        <image src="{{music_item.al.picUrl}}" class="rank_img"></image>
+        <text class="rank_num">{{index+1}}</text>
+        <text class="rank_name">{{music_item.name}}</text>
+      </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
+ </view>
+</view>

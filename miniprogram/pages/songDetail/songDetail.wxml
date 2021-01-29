@@ -1,0 +1,26 @@
+<view class="song_detail_container">
+  <text>{{song.ar[0].name}}</text>
+  <view class="circle"></view>
+  <image class="needle {{isPlay && 'active'}}" src="../../static/song/needle.png"></image>
+ <view class="disc_container {{isPlay ? 'discAnimate':'discAnimate discPause'}}">
+  <image class="disc" src="../../static/song/disc.png"></image>
+  <image class="music_img" src="{{song.al.picUrl}}"></image>
+ </view>
+ <!-- 进度条 -->
+ <view class="bar_container">
+   <text>{{currentTime}}</text>
+   <view class="total_bar">
+     <view class="bar" style="width:{{currentWidth+'rpx'}}"></view>
+     <view class="bar_circle" style="left:{{currentWidth+'rpx'}}"></view>
+   </view>
+   <text>{{durationTime}}</text>
+ </view>
+ <!-- 播放列表 -->
+ <view class="footer_play_list">
+   <text class="iconfont icon-shunxu small"></text>
+   <text class="iconfont icon-icon_gequxiangqing_s" bindtap="handleSwitch" id="pre"></text>
+   <text class="iconfont {{isPlay ? 'icon-zanting':'icon-bofang'}} big" bindtap="togglePlay"></text>
+   <text class="iconfont icon-prev" bindtap="handleSwitch" id="next"></text>
+   <text class="iconfont icon-gedan"></text>
+ </view>
+</view>

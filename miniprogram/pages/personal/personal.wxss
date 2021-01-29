@@ -1,0 +1,142 @@
+
+/* 个人中心头部背景 */
+.personal{
+  background-color: #ccc;
+  height: 100%;
+}
+.personal_header{
+  position: relative;
+  width: 100%;
+  height: 480rpx;
+}
+.personal_header image{
+  width: 100%;
+  height: 100%;
+}
+.personal_user_container{
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  transform: translateY(-50%);
+  padding: 0 20rpx;
+}
+.personal_user_container .user{
+  width: 150rpx;
+  height: 150rpx;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+.personal_bg_black_box{
+  position: absolute;
+  width: 100%;
+  height: 221rpx;
+  top: 50%;
+}
+.personal_bg_black{
+  position: relative;
+  overflow: hidden;
+  height: 221rpx;
+  background-color: rgba(0, 0,0, 0.5);
+  border-radius: 20rpx;
+  margin: 0 20rpx;
+  padding: 10rpx 20rpx;
+}
+.icon-wangguan{
+color: #ff0;
+font-size: 50rpx;
+}
+.personal_sivp_box{
+  display: flex;
+  justify-content: space-between;
+}
+.personal_sivp_box .sivp_left{
+  display: flex;
+  align-items: center;
+}
+.personal_sivp_box .sivp_left text{
+  color: #ff0;
+  margin-left: 20rpx;
+}
+.sivp_right{
+  position: relative;
+  color: black;
+  background-color: sandybrown;
+  border-radius: 30rpx;
+  padding: 5rpx 20rpx;
+  line-height: 54rpx;
+  font-size: 30rpx;
+  z-index: 1
+}
+.open_numbership_box{
+  color: #ff0;
+  font-size: 36rpx;
+  line-height: 50rpx;
+}
+.open_numbership_text{
+font-size: 25rpx;
+color: #fff;
+}
+.vip_card_bg{
+  position: absolute;
+  width: 410rpx!important;
+  right: 0;
+  top: 0;
+}
+.arc{
+  position: relative;
+  top: -13px;
+  width: 100%;
+  height: 30rpx!important;
+}
+/* 我的消息区域 */
+.personal_middle_container,
+.personal_bottom_container{
+  margin: 20rpx 20rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.personal_message_content{
+  display: flex;
+  background-color: #fff;
+  padding: 20rpx 0;
+}
+.personal_message_content view{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  font-size: 25rpx;
+}
+.personal_message_content i{
+  color: red;
+  font-size: 50rpx;
+  margin-bottom: 10rpx;
+}
+/* 个人中心底部 */
+
+.personal_bottom_content{
+  display: flex;
+  flex-direction: column;
+  /* padding: 20rpx 0; */
+}
+.personal_bottom_content .personal_bottom_item{
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10rpx;
+  background-color: #fff;
+  padding-left: 20rpx;
+}
+.personal_bottom_content .personal_bottom_item:nth-child(1){
+flex-direction: column;
+align-items: flex-start;
+height: 150rpx;
+}
+.move_container{
+  position: absolute;
+  width: 100%;
+  top: 410rpx ;
+  background-color: #ccc;
+}

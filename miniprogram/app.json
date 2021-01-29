@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/search/search",
+    "pages/recommendSong/recommendSong",
+    "pages/songDetail/songDetail",
+    "pages/video/video",
+    "pages/personal/personal",
+    "pages/other/other",
+    "pages/login/login"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ff0",
+    "navigationBarTitleText": "龙龙音乐",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#d43c33",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./static/tabs/tab-home.png",
+        "selectedIconPath": "./static/tabs/tab-home-current.png"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "text": "视频",
+        "iconPath": "./static/tabs/tab-cate.png",
+        "selectedIconPath": "./static/tabs/tab-cate-current.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "个人中心",
+        "iconPath": "./static/tabs/tab-my.png",
+        "selectedIconPath": "./static/tabs/tab-my-current.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap10.json",
+  "requiredBackgroundModes": [
+    "audio"
+  ]
+}

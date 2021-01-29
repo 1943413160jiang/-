@@ -1,0 +1,95 @@
+.swiper_content{
+  width: 100%;
+  height: 300rpx;
+}
+.swiper_content image{
+  width: 100%;
+  height: 100%;
+}
+/* 导航栏 */
+.nav_container{
+  display: flex;
+  margin-top: 10rpx;
+}
+.nav_container .nav_item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.nav_container .nav_item text{
+  margin-top: 10rpx;
+  font-size: 30rpx;
+}
+.iconfont{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: #ff0;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 50rpx;
+}
+/* 推荐歌单 */
+.recommend_container{
+  margin-top: 20rpx;
+}
+.recommend_content{
+  margin: 0 20rpx;
+}
+
+.recommend_items{
+  display: flex;
+  height: 300rpx;
+}
+.recommend_items .recommend_item {
+width: 200rpx;
+margin-right: 20rpx;
+font-size: 30rpx;
+}
+.recommend_items .recommend_item image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.recommend_items .recommend_item text{
+  /* 只显示一行 */
+  /* white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  text-overflow: ellipsis; */
+  /* 显示多选 */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;/*显示对其方式*/
+  overflow: hidden;
+}
+/* 排行榜 */
+.top_rank_container{
+  height: 400rpx;
+}
+.hot_song{
+  display: block;
+  margin-bottom: 20rpx;
+}
+.rank_row_content{
+  width: 96%;
+  background-color: #fbfbfb;
+}
+.top_rank_content{
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.top_rank_content image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 6rpx;
+}
+.top_rank_content .rank_num{
+  width: 100rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+.top_rank_content .rank_name{
+  line-height: 100rpx;
+}

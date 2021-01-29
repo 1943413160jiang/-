@@ -1,0 +1,116 @@
+.song_detail_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background-color: rgba(0, 0,0, 0.5);
+}
+.circle{
+  position: relative;
+  width: 52rpx;
+  height: 52rpx;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-top: 20rpx;
+  z-index: 101;
+}
+.needle{
+  position: relative;
+  top: -22rpx;
+  left: 56rpx;
+  width: 192rpx;
+  height: 274rpx;
+  z-index: 100;
+  transform-origin:-10rpx 0;
+  transform: rotate(-20deg);
+  transition: transform 1s;
+}
+.active{
+  transform: rotate(0deg);
+}
+.disc_container{
+  position: relative;
+  top: -140rpx;
+  width: 598rpx;
+  height: 598rpx;
+}
+.disc{
+width: 100%;
+height: 100%;
+}
+.discAnimate{
+  animation: disc 15s linear infinite;
+  animation-delay: 1s;
+}
+.discPause{
+  animation-play-state: paused;
+}
+@keyframes disc{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+.music_img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 370rpx;
+  height: 370rpx;
+  border-radius: 50%;
+}
+/* 播放列表区域 */
+.footer_play_list{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid #fff;
+  height: 120rpx;
+}
+.footer_play_list text{
+  font-size: 50rpx;
+  color: #fff;
+}
+.footer_play_list text.big{
+  font-size: 80rpx;
+}
+.footer_play_list text.small{
+  font-size: 40rpx;
+}
+/* 进度条 */
+.bar_container{
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  justify-content: center;
+  align-items: center;
+}
+.total_bar{
+  position: relative;
+  width: 400rpx;
+  height: 4rpx;
+  background-color: rgba(0, 0,0, 0.5);
+  margin: 0 10rpx;
+}
+.bar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100rpx;
+  height: 4rpx;
+  background-color: red;
+}
+.bar_circle{
+  position: absolute;
+  top: -4rpx;
+  left: 100rpx;
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  background-color: #fff;
+
+}

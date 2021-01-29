@@ -1,0 +1,1 @@
+<button bindtap="handleAppId">获取appid</button>

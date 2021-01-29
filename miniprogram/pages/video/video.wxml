@@ -1,0 +1,32 @@
+<view class="view_container">
+<view class="header">
+<image src="../../static/video/video.jpg"></image>
+<view class="search" bindtap="handleSearch">光辉岁月</view>
+<image src="../../static/favicon.ico"></image>
+</view>
+<!-- 视频导航 -->
+<scroll-view class="scroll_nav" scroll-x enable-flex scroll-into-view="{{'scroll' + current}}" scroll-with-animation>
+<view id="{{'scroll' + item.id}}" class="item" wx:for="{{nav_list}}" wx:key="id">
+  <view class="content {{current===item.id ? 'active':''}}" bindtap="toNav" id="{{item.id}}">{{item.name}}</view>
+</view>
+</scroll-view>
+<!-- 视频区域 -->
+<scroll-view class="video_player_list" bindscrolltolower="tolower" refresher-triggered="{{trigger}}" bindrefresherrefresh="downupload" scroll-y refresher-enabled>
+  <view class="video_player_item" wx:for="{{video_list}}" wx:key="id">
+    <video bindended="handleEnd" bindtimeupdate="handleTime" wx:if="{{videId===item.data.vid}}" class="common" id="{{item.data.vid}}" bindplay="handlePlay" src="{{item.data.urlInfo.url}}"></video>
+    <image id="{{item.data.vid}}" bindtap="handlePlay" wx:else class="common" src="{{item.data.coverUrl}}"></image>
+    <view class="video_player_title">{{item.data.title}}</view>
+    <view class="video_player_instrdocuce">
+      <view class="video_player_instrdocuce_left">
+        <image class="video_user_img" src="{{item.data.creator.avatarUrl}}"></image>
+        <text>{{item.data.creator.nickname}}</text>
+      </view>
+      <view class="video_player_instrdocuce_right">
+        <i class="iconfont icon-aixin"><em>{{item.data.shareCount}}</em></i>
+        <i class="iconfont icon-xiaoxi1"><em>{{item.data.commentCount}}</em></i>
+        <button id="{{item.data.vid}}" bindtap="send"  open-type="share"> <i class="iconfont icon-fenxiang"></i></button>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+</view>
